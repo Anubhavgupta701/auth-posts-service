@@ -98,23 +98,10 @@ export const LoginPage = () => {
               <p className="text-red-500 text-sm">{error}</p>
             )}
 
-            {/* Remember + Forgot */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 text-sm text-zinc-600 cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
-                />
-                Remember me
-              </label>
+            
 
-              <button
-                type="button"
-                className="text-sm font-medium text-zinc-900 hover:underline"
-              >
-                Forgot password?
-              </button>
-            </div>
+               
+            
 
             {/* Button */}
             <Button type="submit" className="w-full h-11" isLoading={isLoading}>
