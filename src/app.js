@@ -4,11 +4,16 @@ const authRouter=require("./routes/auth.routes");
 const cookieParser=require("cookie-parser");
 const { uploadImage } = require("./services/storage.service");
 const postModel=require("./models/post.model");
+const cors = require("cors");
 
 const multer=require("multer");
 
 const app=express();
 
+app.use(cors({
+    origin: true, // Allow all origins explicitly, or configure as needed
+    credentials: true,
+}));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());

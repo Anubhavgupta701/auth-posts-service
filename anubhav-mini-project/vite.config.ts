@@ -18,9 +18,9 @@ export default defineConfig(({mode}) => {
     server: {
       port: 3000,
       proxy: {
-        '/api': { target: 'http://localhost:4000', changeOrigin: true },
-        '/create-post': { target: 'http://localhost:4000', changeOrigin: true },
-        '/posts': { target: 'http://localhost:4000', changeOrigin: true },
+        '/api': { target: 'https://auth-posts-service-3.onrender.com', changeOrigin: true, secure: false },
+        '/create-post': { target: 'https://auth-posts-service-3.onrender.com', changeOrigin: true, secure: false },
+        '/posts': { target: 'https://auth-posts-service-3.onrender.com', changeOrigin: true, secure: false },
       },
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

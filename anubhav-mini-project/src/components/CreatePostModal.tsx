@@ -49,7 +49,7 @@ export const CreatePostModal = ({ isOpen, onClose, onSubmit }: CreatePostModalPr
       formData.append('image', imageFile);
       formData.append('caption', caption);
 
-      const res = await fetch('/create-post', {
+      const res = await fetch('https://auth-posts-service-3.onrender.com/create-post', {
         method: 'POST',
         body: formData,
       });

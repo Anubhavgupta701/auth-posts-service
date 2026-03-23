@@ -18,7 +18,7 @@ export const DashboardPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/posts');
+      const res = await fetch('https://auth-posts-service-3.onrender.com/posts');
       const data = await res.json();
       if (res.ok) setPosts(data.posts || []);
       else setError(data.message || 'Failed to load posts');

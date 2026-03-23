@@ -33,7 +33,7 @@ export const OTPPage = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch('/api/auth/verify-email', {
+      const response = await fetch('https://auth-posts-service-3.onrender.com/api/auth/verify-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
